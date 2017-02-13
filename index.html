@@ -7,7 +7,7 @@
     </head>
     <body>
         <textarea name="name" rows="8" cols="80" id="text"></textarea>
-        <button type="button" name="button" id="button" value="décripter">décripter</button>
+        <button type="button" name="button" id="button">Crypté</button>
         <div id="textdecode">
 
         </div>
@@ -26,12 +26,14 @@
             for (i = 0; i < text.length; i++) {
                 var lettre = text[i];
                 var indiceOrigine = alpha.indexOf(lettre);
-                    if(indiceOrigine == -1){
-                        lettreDecode = " ";
-                    }else{
-                        var lettreDecode = alpha[indiceOrigine+decalage];
 
-                    }
+                    if(indiceOrigine == -1){
+                    lettreDecode = " ";
+                }else{
+
+                    var lettreDecode = alpha[indiceOrigine+decalage];
+                    console.log(lettreDecode);
+                }
                 motdecode += lettreDecode;
             };
 
