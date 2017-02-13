@@ -17,41 +17,27 @@
         var textElement = document.getElementById('text');
         var buttonElement = document.getElementById('button');
         var divElement = document.getElementById('textdecode');
-        var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var decalage = 2;
 
-        buttonElement.addEventListener("click", function(){
+        buttonElement.addEventListener("click", function() {
             var text = textElement.value;
-            text = alpha.replace(/A/g, "B");
-            text = alpha.replace(/B/g, "C");
-            text = alpha.replace(/C/g, "D");
-            text = alpha.replace(/D/g, "E");
-            text = alpha.replace(/E/g, "F");
-            text = alpha.replace(/F/g, "G");
-            text = alpha.replace(/G/g, "H");
-            text = alpha.replace(/H/g, "I");
-            text = alpha.replace(/I/g, "J");
-            text = alpha.replace(/J/g, "K");
-            text = alpha.replace(/K/g, "L");
-            text = alpha.replace(/L/g, "M");
-            text = alpha.replace(/M/g, "N");
-            text = alpha.replace(/N/g, "O");
-            text = alpha.replace(/O/g, "P");
-            text = alpha.replace(/P/g, "Q");
-            text = alpha.replace(/Q/g, "R");
-            text = alpha.replace(/R/g, "S");
-            text = alpha.replace(/S/g, "T");
-            text = alpha.replace(/T/g, "U");
-            text = alpha.replace(/U/g, "V");
-            text = alpha.replace(/V/g, "W");
-            text = alpha.replace(/W/g, "X");
-            text = alpha.replace(/X/g, "Y");
-            text = alpha.replace(/Y/g, "Z");
-            text = alpha.replace(/Z/g, "A");
+            var motdecode = "";
+            for (i = 0; i < text.length; i++) {
+                var lettre = text[i];
+                var indiceOrigine = alpha.indexOf(lettre);
+                    if(indiceOrigine == -1){
+                        lettreDecode = " ";
+                    }else{
+                        var lettreDecode = alpha[indiceOrigine+decalage];
 
-            divElement.innerHTML = text;
+                    }
+                motdecode += lettreDecode;
+            };
+
+            divElement.innerHTML = motdecode;
 
 
-            console.log(text);
         })
     </script>
 </html>
