@@ -22,6 +22,7 @@
 
         buttonElement.addEventListener("click", function() {
             var text = textElement.value;
+            text = text.toUpperCase();
             var motdecode = "";
             for (i = 0; i < text.length; i++) {
                 var lettre = text[i];
