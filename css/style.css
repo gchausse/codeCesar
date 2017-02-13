@@ -1,4 +1,24 @@
+body {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
 button{
+    display: block;
     height: 3em;
-    width: 5em;
+    width: 20em;
+    margin: 1em 0;
+}
+
+textarea {
+    margin-top: 2em;
+    border: solid 1px rgb(100, 200, 232);
+}
+
+div {
+    border: solid 1px rgb(24, 152, 193);
+    height: 10em;
+    width: 30em;
+    box-shadow: 4px 4px 6px 0px rgb(78, 174, 245);
 }
